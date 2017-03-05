@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TasksViewController.swift
 //  Do it
 //
 //  Created by Ken Moody on 3/2/17.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         tableView.dataSource = self
-        tableView.dataSource = self
+        tableView.delegate = self
         
     }
 
@@ -38,8 +39,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             cell.textLabel?.text = task.name
         }
-        cell.textLabel?.text = task.name
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedIndex = indexPath.row
+        
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectTaskSegue", sender: task)
     }
     
     func makeTask() -> [Task] {
@@ -56,6 +65,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         task3.important = false
         
         return [task1, task2, task3]
+    }
+    @IBAction func plusTapped(_ sender: AnyObject) {
+        performSegue(withIdentifier: "addSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addSegue" {
+        let nextVC = segue.destination as!
+        CreateTaskViewController
+        nextVC.previousVC = self
+    }
+        if segue.identifier == "selectTaskSegue" {
+            let nextVC = segue.destination as!
+            CompleteTaskViewController
+            nextVC.task = sender as! Task
+            nextVC.previousVC = self
+            
+        }
     }
     
 }
