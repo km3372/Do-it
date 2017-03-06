@@ -78,19 +78,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="important" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HY1-iF-iCR">
-                                <rect key="frame" x="150.5" y="179.5" width="74.5" height="21"/>
+                                <rect key="frame" x="150.5" y="169.5" width="74.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-fp-Obe">
-                                <rect key="frame" x="163" y="210.5" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-fp-Obe">
+                                <rect key="frame" x="163" y="200.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="addTapped:" destination="I18-pY-gPQ" eventType="valueChanged" id="abr-8Y-DwD"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ema-VW-3tz">
-                                <rect key="frame" x="172" y="271.5" width="30" height="30"/>
+                                <rect key="frame" x="172" y="261.5" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                             </button>
                         </subviews>
@@ -100,7 +100,7 @@
                             <constraint firstItem="8pt-zM-0j7" firstAttribute="top" secondItem="IqX-LT-oKv" secondAttribute="bottom" constant="10" id="B8a-Kk-cas"/>
                             <constraint firstItem="HY1-iF-iCR" firstAttribute="centerX" secondItem="DMR-Fo-gfd" secondAttribute="centerX" id="C9e-ME-gz5"/>
                             <constraint firstItem="Ema-VW-3tz" firstAttribute="top" secondItem="h1f-fp-Obe" secondAttribute="bottom" constant="30" id="JKF-IU-VKD"/>
-                            <constraint firstItem="HY1-iF-iCR" firstAttribute="top" secondItem="8pt-zM-0j7" secondAttribute="bottom" constant="40" id="Kk3-y9-fcj"/>
+                            <constraint firstItem="HY1-iF-iCR" firstAttribute="top" secondItem="8pt-zM-0j7" secondAttribute="bottom" constant="30" id="Kk3-y9-fcj"/>
                             <constraint firstItem="h1f-fp-Obe" firstAttribute="centerX" secondItem="DMR-Fo-gfd" secondAttribute="centerX" id="NPP-gO-P8h"/>
                             <constraint firstItem="8pt-zM-0j7" firstAttribute="centerX" secondItem="DMR-Fo-gfd" secondAttribute="centerX" id="hrY-Hs-IPa"/>
                             <constraint firstItem="8pt-zM-0j7" firstAttribute="leading" secondItem="DMR-Fo-gfd" secondAttribute="leadingMargin" constant="40" id="iD3-ZL-6vS"/>
