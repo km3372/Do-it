@@ -62,8 +62,8 @@
 			children = (
 				4D087B871E68AA68001CE074 /* AppDelegate.swift */,
 				4D087B891E68AA69001CE074 /* TasksViewController.swift */,
-				8D8A67C91E690C93006D81CD /* CreateTaskViewController.swift */,
 				4D61B8321E6C3BAE003E5B2B /* CompleteTaskViewController.swift */,
+				8D8A67C91E690C93006D81CD /* CreateTaskViewController.swift */,
 				4D087B8B1E68AA69001CE074 /* Main.storyboard */,
 				4D087B911E68AA6B001CE074 /* Assets.xcassets */,
 				4D087B931E68AA6B001CE074 /* LaunchScreen.storyboard */,
