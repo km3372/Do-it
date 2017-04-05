@@ -17,9 +17,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -42,8 +39,11 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let task = tasks[indexPath.row]
         
         if task.important {
+            
             cell.textLabel?.text = "❗️\(task.name!)"
+            
         } else {
+            
             cell.textLabel?.text = task.name!
         }
         
@@ -60,6 +60,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBAction func plusTapped(_ sender: AnyObject) {
+         _ = tasks
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
